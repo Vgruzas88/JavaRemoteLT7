@@ -1,0 +1,4 @@
+Circle area is: 78.53981633974483
+Circle length is: 31.41592653589793
+RightAngleTriangle area is: 40.0
+Rectangle area is: 80.0
