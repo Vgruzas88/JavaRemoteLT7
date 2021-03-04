@@ -1,9 +1,7 @@
 package lt.sda.javaFundamentalsCoding.namuDarbai_02_20.uzduotis_04;
 
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,39 +36,43 @@ public class Main {
         companies.add(company4);
         companies.add(company5);
 
-        getMostExpensiveDevice(companies);
-        getTechnologyCompanies(companies);
+//        getMostExpensiveDevice(companies);
+//        getTechnologyCompanies(companies);
 
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\vgruz\\IdeaProjects\\JavaFundamentalsCoding\\src\\lt\\sda\\javaFundamentalsCoding\\namuDarbai_02_20\\uzduotis_04\\results.txt"))) {
+            bufferedWriter.write(getMostExpensiveDevice(companies));
             bufferedWriter.write(getTechnologyCompanies(companies));
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
-
     public static String getMostExpensiveDevice(List<Company> companies) {
+        StringBuilder mostExpensiveDeviceText = new StringBuilder();
         for (Company company : companies) {
             Device mostExpensiveDevice = new Device("test", 0, 1, "a");
-            String mostExp = null;
             for (Device device : company.devices) {
                 if (mostExpensiveDevice.getPrice() < device.getPrice()) {
                     mostExpensiveDevice = device;
-                    mostExp = company +" most expensive device is: " + device;
                 }
             }
-             System.out.println(company.name + " most expensive device is: " + mostExpensiveDevice.getName());
+            mostExpensiveDeviceText.append(company.name + " most expensive device is: " + mostExpensiveDevice.getName());
+            mostExpensiveDeviceText.append("\n");
+            System.out.println(company.name + " most expensive device is: " + mostExpensiveDevice.getName());
         }
-        return
+        return String.valueOf(mostExpensiveDeviceText);
     }
-    public static void getTechnologyCompanies(List<Company> companies) {
-        System.out.println("Technology companies are: ");
+    public static String getTechnologyCompanies(List<Company> companies) {
+        StringBuilder technologyCompaniesText = new StringBuilder();
+        technologyCompaniesText.append("Technology companies are: \n");
         for (Company company : companies) {
                 if (company.getProductionType() == ProductionType.TECHNOLOGIES) {
                     System.out.println(company.name);
+                    technologyCompaniesText.append(company.name);
+                    technologyCompaniesText.append("\n");
                 }
             }
+        return String.valueOf(technologyCompaniesText);
     }
 }
 

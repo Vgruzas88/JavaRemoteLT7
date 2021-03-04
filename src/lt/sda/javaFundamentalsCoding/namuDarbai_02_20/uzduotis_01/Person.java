@@ -16,12 +16,7 @@ public class Person implements Ieskoklis {
     }
 
     @Override
-    public double getAmount() {
+    public int findRichest() {
         return amount;
-    }
-
-    @Override
-    public void findRichest() {
-
     }
 }

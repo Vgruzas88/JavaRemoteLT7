@@ -17,11 +17,7 @@ public class Country implements Ieskoklis {
     }
 
     @Override
-    public double getAmount() {
+    public int findRichest() {
         return amount;
-    }
-    @Override
-    public void findRichest() {
-
     }
 }

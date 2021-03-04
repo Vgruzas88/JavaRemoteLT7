@@ -1,0 +1,7 @@
+Kompanija1 most expensive device is: Tablets
+Kompanija2 most expensive device is: Computers
+Kompanija3 most expensive device is: Phones
+Kompanija4 most expensive device is: Tablets
+Kompanija5 most expensive device is: Tablets
+Technology companies are: Kompanija1
+Kompanija5
