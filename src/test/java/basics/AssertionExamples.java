@@ -32,9 +32,9 @@ public class AssertionExamples {
     public void testCalculatorMultiplication() {
         Calculator calculator = new Calculator();
 
-        int result = calculator.multiplication(10,50);
+        int result = calculator.multiplication(5,50);
 
-        Assertions.assertEquals(100,result);
+        Assertions.assertEquals(250,result);
     }
 
     @Test
@@ -43,6 +43,6 @@ public class AssertionExamples {
 
         int result = calculator.division(200,20);
 
-        Assertions.assertEquals(5,result);
+        Assertions.assertEquals(10,result);
     }
 }
