@@ -1,7 +1,5 @@
 package lt.sda.javaFundamentalsCoding.advanced.streams;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

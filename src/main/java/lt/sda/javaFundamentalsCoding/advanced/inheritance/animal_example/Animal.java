@@ -1,6 +1,5 @@
 package lt.sda.javaFundamentalsCoding.advanced.inheritance.animal_example;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 public abstract class Animal {
 
