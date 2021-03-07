@@ -1,3 +1,0 @@
-Laba diena,
-Mano vardas Vytautas,
-Mokomes skaityti duomenu failus
