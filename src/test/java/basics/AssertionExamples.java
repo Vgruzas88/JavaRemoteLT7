@@ -34,7 +34,7 @@ public class AssertionExamples {
 
         int result = calculator.multiplication(10,50);
 
-        Assertions.assertEquals(500,result);
+        Assertions.assertEquals(100,result);
     }
 
     @Test
