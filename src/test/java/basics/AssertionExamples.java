@@ -4,6 +4,9 @@ import lt.sda.javaFundamentalsCoding.fundamentals_testing.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertSame;
+
 public class AssertionExamples {
 
 
@@ -16,7 +19,7 @@ public class AssertionExamples {
         int result = calculator.add(5, 85);
 
         // then
-        Assertions.assertEquals(90,result);
+        assertEquals(90,result);
     }
 
     @Test
@@ -25,7 +28,7 @@ public class AssertionExamples {
 
         int result = calculator.subtract(80,20);
 
-        Assertions.assertEquals(60,result);
+        assertEquals(60,result);
     }
 
     @Test
@@ -34,7 +37,7 @@ public class AssertionExamples {
 
         int result = calculator.multiplication(5,50);
 
-        Assertions.assertEquals(250,result);
+        assertEquals(250,result);
     }
 
     @Test
@@ -43,7 +46,7 @@ public class AssertionExamples {
 
         int result = calculator.division(200,20);
 
-        Assertions.assertEquals(10,result);
+        assertEquals(10,result);
     }
     @Test
     public void testAssertTrueFalse() {
@@ -56,8 +59,8 @@ public class AssertionExamples {
         boolean condition = firstNum == secondNum;
 
         // then
-        Assertions.assertTrue(firstNum != secondNum);
-        Assertions.assertFalse(condition);
+        assertTrue(firstNum != secondNum);
+        assertFalse(condition);
     }
 
     @Test
@@ -69,8 +72,8 @@ public class AssertionExamples {
         // when
 
         // then
-        Assertions.assertNull(emptyTest);
-        Assertions.assertNotNull(text);
+        assertNull(emptyTest);
+        assertNotNull(text);
     }
 
     @Test
@@ -78,7 +81,7 @@ public class AssertionExamples {
         int[] firstArray = {1,2,3,4,5};
         int[] secondArray = {1,2,3,4,5};
 
-        Assertions.assertArrayEquals(firstArray,secondArray);
+        assertArrayEquals(firstArray,secondArray);
     }
 
     @Test
@@ -89,8 +92,8 @@ public class AssertionExamples {
 
         String text3 = new String("abc");
 
-        Assertions.assertSame(text1,text2);
-        Assertions.assertNotSame(text1,text3);
+        assertSame(text1,text2);
+        assertNotSame(text1,text3);
 
 
     }
