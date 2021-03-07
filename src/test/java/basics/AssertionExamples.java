@@ -41,7 +41,7 @@ public class AssertionExamples {
     public void testCalculatorDivision() {
         Calculator calculator = new Calculator();
 
-        int result = calculator.division(100,20);
+        int result = calculator.division(200,20);
 
         Assertions.assertEquals(5,result);
     }
